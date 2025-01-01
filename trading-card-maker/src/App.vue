@@ -3,6 +3,7 @@ import { RouterView } from 'vue-router'
 import AppHeader from './components/AppHeader.vue'
 import AppFooter from './components/AppFooter.vue'
 import Auth from './components/common/Auth.vue'
+import './assets/main.css'
 </script>
 
 <template>
@@ -18,10 +19,11 @@ import Auth from './components/common/Auth.vue'
 <style>
 /* Global styles */
 body {
-  @apply bg-gray-50;
+  background-color: rgb(249 250 251);
 }
 
 .container {
-  @apply mx-auto px-4;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 </style>

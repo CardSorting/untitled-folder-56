@@ -73,7 +73,5 @@ const toggleMenu = () => {
 </template>
 
 <style scoped>
-.router-link-active {
-  @apply text-gray-900 font-medium;
-}
+/* No need for custom styles since we're using Tailwind classes directly */
 </style>
