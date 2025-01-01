@@ -2,9 +2,10 @@
   <div class="min-h-screen flex flex-col">
     <!-- Hero Section -->
     <section 
-      class="relative h-[90vh] flex items-center justify-center overflow-hidden bg-[url('/images/hero-bg.jpg')] bg-cover bg-center"
+      class="relative h-[90vh] flex items-center justify-center overflow-hidden"
       aria-labelledby="hero-heading"
     >
+      <HeroBackground class="absolute inset-0 z-0" />
       <!-- Overlay -->
       <div class="absolute inset-0 bg-black/50 z-10"></div>
 
@@ -221,21 +222,23 @@
 import { ref } from 'vue'
 import FeatureCard from '../components/FeatureCard.vue'
 import TestimonialCard from '../components/TestimonialCard.vue'
+import HeroBackground from '../components/icons/HeroBackground.vue'
+import UserAvatar from '../components/icons/UserAvatar.vue'
 
 // Features data
 const features = ref([
   {
-    icon: 'design',
+    icon: 'IconTooling',
     title: 'Easy Design Tools',
     description: 'Intuitive interface for creating professional cards'
   },
   {
-    icon: 'templates',
+    icon: 'IconDocumentation',
     title: 'Pre-made Templates',
     description: 'Choose from a variety of ready-to-use templates'
   },
   {
-    icon: 'share',
+    icon: 'IconSupport',
     title: 'Easy Sharing',
     description: 'Share your creations with friends and community'
   }
@@ -247,13 +250,13 @@ const testimonials = ref([
     id: 1,
     name: 'John Doe',
     comment: 'This card maker is amazing! So easy to use and the results are professional.',
-    avatar: '/avatars/john.jpg'
+    avatar: 'UserAvatar'
   },
   {
     id: 2,
     name: 'Jane Smith',
     comment: 'I love the variety of templates and customization options.',
-    avatar: '/avatars/jane.jpg'
+    avatar: 'UserAvatar'
   }
 ])
 

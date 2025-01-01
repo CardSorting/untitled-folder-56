@@ -5,11 +5,10 @@
     @click="$emit('click')"
   >
     <div class="w-16 h-16 mx-auto mb-4 rounded-full overflow-hidden">
-      <img 
-        :src="testimonial.avatar" 
-        :alt="testimonial.name" 
-        class="w-full h-full object-cover"
-      >
+      <component
+        :is="testimonial.avatar"
+        class="w-full h-full"
+      />
     </div>
     <h4 class="text-lg font-semibold text-gray-800 mb-2 text-center">
       {{ testimonial.name }}
