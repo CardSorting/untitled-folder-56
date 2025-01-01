@@ -2,13 +2,9 @@
   <div class="min-h-screen flex flex-col">
     <!-- Hero Section -->
     <section 
-      class="relative h-[90vh] flex items-center justify-center overflow-hidden"
+      class="relative h-[90vh] flex items-center justify-center bg-primary"
       aria-labelledby="hero-heading"
     >
-      <HeroBackground class="absolute inset-0 z-0" />
-      <!-- Overlay -->
-      <div class="absolute inset-0 bg-black/50 z-10"></div>
-
       <!-- Content -->
       <div class="max-w-4xl mx-auto text-center relative z-20 px-4">
         <h1 
@@ -82,7 +78,6 @@
           <FeatureCard
             v-for="(feature, index) in features"
             :key="index"
-            :icon="feature.icon"
             :title="feature.title"
             :description="feature.description"
             :class="`animate-fade-in-up delay-${(index + 1) * 100}`"
@@ -170,12 +165,6 @@
     </section>
 
     <!-- Footer Section -->
-    <footer 
-      class="bg-accent text-white py-6 mt-auto"
-      aria-label="Website footer"
-    >
-      <p class="text-center">&copy; 2023 Trading Card Maker. All rights reserved.</p>
-    </footer>
   </div>
 </template>
 
@@ -222,23 +211,18 @@
 import { ref } from 'vue'
 import FeatureCard from '../components/FeatureCard.vue'
 import TestimonialCard from '../components/TestimonialCard.vue'
-import HeroBackground from '../components/icons/HeroBackground.vue'
-import UserAvatar from '../components/icons/UserAvatar.vue'
 
 // Features data
 const features = ref([
   {
-    icon: 'IconTooling',
     title: 'Easy Design Tools',
     description: 'Intuitive interface for creating professional cards'
   },
   {
-    icon: 'IconDocumentation',
     title: 'Pre-made Templates',
     description: 'Choose from a variety of ready-to-use templates'
   },
   {
-    icon: 'IconSupport',
     title: 'Easy Sharing',
     description: 'Share your creations with friends and community'
   }
@@ -249,14 +233,12 @@ const testimonials = ref([
   {
     id: 1,
     name: 'John Doe',
-    comment: 'This card maker is amazing! So easy to use and the results are professional.',
-    avatar: 'UserAvatar'
+    comment: 'This card maker is amazing! So easy to use and the results are professional.'
   },
   {
     id: 2,
     name: 'Jane Smith',
-    comment: 'I love the variety of templates and customization options.',
-    avatar: 'UserAvatar'
+    comment: 'I love the variety of templates and customization options.'
   }
 ])
 

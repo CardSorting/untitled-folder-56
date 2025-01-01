@@ -1,5 +1,5 @@
-declare module '../../composables/useAuth' {
-  export const user: Ref<any>
-  export const signInWithGoogle: () => Promise<void>
-  export const signOutUser: () => Promise<void>
-}
+import { Ref } from 'vue'
+
+export declare const user: Ref<any>
+export declare const signInWithGoogle: () => Promise<void>
+export declare const signOutUser: () => Promise<void>
